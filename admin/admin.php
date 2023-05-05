@@ -36,7 +36,7 @@ $employes = $result->fetchAll(PDO::FETCH_ASSOC);
                     <td><?= $employe['salaire']; ?></td>
                     <td>
                         <a href="seeEmployes.php?id=<?= $employe['id_employes']; ?>"><i class="bi bi-eye text-primary"></i></a>
-                        <a href=""><i class="bi bi-pen text-warning"></i></a>
+                        <a href="editEmploye.php?id=<?= $employe['id_employes']; ?>"><i class="bi bi-pen text-warning"></i></a>
                         <a href="deleteEmploye.php?id=<?=$employe['id_employes']; ?>"><i class="bi bi-trash text-danger"></i></a>
                     </td>
                 </tr>

@@ -69,12 +69,12 @@
         </div>
         <div class="mb-3">
             <label for="date" class="form-label">Date</label>
-            <input type="date" id="date" class="form-control" name="date">
+            <input type="date" id="date" class="form-control" name="date" value="<?= $_POST['date'] ?? ''; ?>">
             <small class="text-danger"><?= "*" . ($error['date'] ?? ''); ?></small>
         </div>
         <div class="mb-3">
             <label for="salaire" class="form-label">Salaire</label>
-            <input type="number" id="salaire" class="form-control" name="salaire">
+            <input type="number" id="salaire" class="form-control" name="salaire" value="<?= $_POST['salaire'] ?? ''; ?>">
             <small class="text-danger"><?= "*" . ($error['salaire'] ?? ''); ?></small>
         </div>
         <input type="submit" value="Envoyer" class="btn btn-outline-dark">
