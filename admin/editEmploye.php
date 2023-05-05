@@ -8,6 +8,25 @@
         $resultat->execute(['id_employes' => $_GET['id']]);
         $employes = $resultat->fetch(PDO::FETCH_ASSOC);
     }
+
+    if(!empty($_POST)){
+        $error = [];
+        foreach($_POST as $indice => $input){
+            if(empty($input)){
+                $error[$indice] = 'le champ ' . $indice . ' est obligatoire (edit)';
+            }
+        }
+        $employes = $_POST;
+        if(!$error) {
+            $request = "UPDATE employes SET prenom = :prenom, nom = :nom, sexe = :sexe, service = :service, salaire = :salaire";
+
+            $data = [
+                'prenom' => $_POST['employes']
+            ]
+
+
+        }
+    }
 ?>
 
 
