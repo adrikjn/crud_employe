@@ -21,24 +21,14 @@
             ];
             $result = $pdo->prepare($request);
             $result->execute($data);
+
+            header("Location: admin.php");
+            exit();
         }
     }
 
 
 ?>
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 <h1 class="text-center my-5">Add a new employe</h1>
 
