@@ -18,12 +18,19 @@
         }
         $employes = $_POST;
         if(!$error) {
-            $request = "UPDATE employes SET prenom = :prenom, nom = :nom, sexe = :sexe, service = :service, salaire = :salaire";
+            $request = "UPDATE employes SET prenom = :prenom, nom = :nom, sexe = :sexe, service = :service, salaire = :salaire WHERE id_employes = :id_employes";
 
             $data = [
-                'prenom' => $_POST['employes']
-            ]
-
+                'prenom' => $_POST['prenom'],
+                'nom' => $_POST['nom'],
+                'sexe' => $_POST['sexe'],
+                'service' => $_POST['service'],
+                'salaire' => $_POST['salaire']
+            ];
+            $resultat = $pdo->prepare($request);
+            $resultat->execute($data);
+            header('Location: admin.php');
+            exit();
 
         }
     }
