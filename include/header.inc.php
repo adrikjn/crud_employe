@@ -39,7 +39,7 @@
                             <ul class="dropdown-menu">
                                 <li><a class="dropdown-item" href="<?= BASE . "admin/addEmployes.php"; ?>">Add employe</a></li>
                                 <hr class="dropdown-divider">
-                                <li><a class="dropdown-item" href="#">Admin employes</a></li>
+                                <li><a class="dropdown-item" href="<?= BASE . "admin/admin.php"; ?>">Admin employes</a></li>
                                 <hr class="dropdown-divider">
                                 <li><a class="dropdown-item" href="#">Admin something</a></li>
                             </ul>
